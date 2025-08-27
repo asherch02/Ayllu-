@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Quiénes somos?</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/about-us.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="banner-nav navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- Logo y nombre -->
+          <div class="logo-brand d-flex align-items-center">
+            <img src="../img/logo.png" alt="Logo Ayllu" />
+            <span class="brand">Ayllu</span>
+          </div>
+
+          <!-- Botón responsive -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Links -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./about-us.html">¿Quiénes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./contact.html"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="about-section">
+      <!-- Radios -->
+      <input type="radio" name="view" id="home" checked />
+      <input type="radio" name="view" id="general" />
+      <input type="radio" name="view" id="dasha" />
+      <input type="radio" name="view" id="yadira" />
+      <input type="radio" name="view" id="mariana" />
+
+      <div class="stage">
+        <section class="screen intro">
+          <div class="left-col">
+            <label for="general" class="alpaca">
+              <img src="../img/alpaca.png" alt="alpaca-peruana" />
+            </label>
+          </div>
+
+          <div class="right-col">
+            <h1 class="title">¿Quiénes somos?</h1>
+
+            <div class="characters">
+              <!-- Cada contenedor -->
+              <label for="dasha" class="character c-dasha">
+                <img src="../img/dasha.png" alt="Dasha-nombre-fundadora" />
+                <h3>Dasha</h3>
+              </label>
+
+              <label for="yadira" class="character c-yadira">
+                <img src="../img/yadira.png" alt="Yadira-nombre-fundadora" />
+                <h3>Yadira</h3>
+              </label>
+
+              <label for="mariana" class="character c-mariana">
+                <img src="../img/mariana.png" alt="Mariana-nombre-fundadora" />
+                <h3>Mariana</h3>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Somos Ayllu -->
+        <section class="screen panel general">
+          <label for="home" class="back">← Volver</label>
+          <h1>Somos Ayllu</h1>
+          <p>
+            Somos Ayllu, un proyecto que nace del profundo amor por la cultura
+            peruana y el deseo de honrar la riqueza ancestral que nos define.
+            Buscamos ser un puente entre el pasado y el presente, conectando a
+            las personas con las raíces de nuestro Perú a través de experiencias
+            y actividades únicas. Creemos firmemente que la cultura es un tesoro
+            vivo que debe ser compartido y celebrado. Por ello, te invitamos a
+            sumergirte con nosotros en un viaje de descubrimiento a través de la
+            música, danzas, gastronomía, y el arte de nuestros pueblos. En
+            Ayllu, no solo mostramos la cultura, la vivimos.
+          </p>
+        </section>
+
+        <!-- PANEL: Dasha -->
+        <section class="screen panel dasha">
+          <label for="home" class="back">← Volver</label>
+          <h1>Dasha</h1>
+          <p>
+            Para mí, Ayllu es una forma de honrar a mis ancestros. Me entusiasma
+            poder compartir las historias y los rituales que aprendí de mi
+            familia. Siento que no es solo un proyecto, es un compromiso para
+            que nuestra herencia no se pierda. Cuando veo a la gente interesada
+            en nuestras tradiciones, sé que estamos haciendo algo valioso.
+          </p>
+        </section>
+
+        <!-- PANEL: Yadira -->
+        <section class="screen panel yadira">
+          <label for="home" class="back">← Volver</label>
+          <h1>Yadira</h1>
+          <p>
+            Estoy muy feliz de que estemos creando un espacio donde todos se
+            sientan bienvenidos. Lo que más me importa es que las actividades
+            sean inclusivas, para que personas con diferentes habilidades y de
+            distintas partes del Perú puedan participar. Veo a Ayllu como un
+            puente que une a la gente a través de nuestra cultura, demostrando
+            que somos más fuertes cuando estamos juntos.
+          </p>
+        </section>
+
+        <!-- PANEL: Mariana -->
+        <section class="screen panel mariana">
+          <label for="home" class="back">← Volver</label>
+          <h1>Mariana</h1>
+          <p>
+            Veo un futuro muy grande para Ayllu. Me emociona cómo estamos
+            utilizando la tecnología para documentar y difundir lo que hacemos.
+            No se trata solo de un evento, sino de construir una plataforma
+            digital que pueda mostrar nuestra cultura al mundo entero y durar en
+            el tiempo. Siento que Ayllu es un modelo para otros proyectos
+            culturales, demostrando que la tradición y la innovación pueden ir
+            de la mano.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
