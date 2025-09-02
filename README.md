@@ -1,6 +1,6 @@
 #Ayllu
 
-Ayllu es una iniciativa que busca fortalecer la conexión entre jóvenes emprendedores y oportunidades en el Perú. Este repositorio contiene el código, documentación y recursos necesarios para su desarrollo.
+Ayllu es una iniciativa que busca fortalecer la conexión entre jóvenes y oportunidades de conocer la cultura en el Perú. Este repositorio contiene el código, documentación y recursos necesarios para su desarrollo.
 
 # 🚀 Objetivos:
 
