@@ -18,7 +18,7 @@ Ayllu es una iniciativa que busca fortalecer la conexión entre jóvenes y oport
 
 1. Clonar el repositorio:  
    ```bash
-   git clone https://github.com/tu-usuario/ayllu.git
+   [git clone https://github.com/tu-usuario/ayllu.git](https://github.com/asherch02/Ayllu-.git)
 
 # 💡 Equipo
 
