@@ -1,4 +1,24 @@
-/* Navbar */
+/* =========================
+   Variables
+   ========================= */
+:root {
+  --primary-color: #cb7722;
+  --secondary-color: #002f34;
+  --accent-color: #0066cc;
+  --accent-hover: #004a99;
+  --success-color: #28a745;
+  --background-gradient: linear-gradient(135deg, #f9a825, #a5121d);
+  --input-border: #ccc;
+  --input-focus: #0066cc;
+  --input-radius: 10px;
+  --box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  --container-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --font-main: "Playfair Display", serif;
+}
+
+/* =========================
+   Navbar
+   ========================= */
 .banner-nav {
   position: fixed;
   top: 0;
@@ -9,10 +29,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #cb7722;
+  background: var(--primary-color);
   color: #fff;
   font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   z-index: 1000;
 }
 .logo-brand img {
@@ -21,22 +41,26 @@
   margin-right: 10px;
 }
 
-/* Título */
+/* =========================
+   Title
+   ========================= */
 .banner-title {
   margin-top: 120px;
   text-align: center;
   padding: 20px;
 }
 .banner-title h1 {
-  color: #002f34;
+  color: var(--secondary-color);
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* Cuerpo */
+/* =========================
+   Body
+   ========================= */
 body {
-  font-family: "Playfair Display", serif;
-  background: linear-gradient(135deg, #f9a825, #a5121d);
+  font-family: var(--font-main);
+  background: var(--background-gradient);
   padding: 20px;
   min-height: 100vh;
 }
@@ -49,28 +73,34 @@ body {
   margin: 40px auto;
 }
 
-/* Imágenes laterales */
+/* =========================
+   Side Images
+   ========================= */
 .side-image img {
   max-width: 250px;
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow);
   transition: transform 0.3s;
 }
 .side-image img:hover {
   transform: scale(1.05);
 }
 
-/* Formulario */
-.formulario {
+/* =========================
+   Form Section
+   ========================= */
+.form-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f4f6f9;
+  overflow: hidden;
 }
 .form-container {
-  background: white;
+  background: #fff;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--container-shadow);
   width: 90%;
   max-width: 600px;
   text-align: center;
@@ -80,11 +110,11 @@ body {
   font-size: 22px;
   color: #333;
 }
-.fila {
+.form-row {
   display: flex;
   gap: 15px;
 }
-.campo {
+.form-field {
   flex: 1;
 }
 .form-container label {
@@ -92,6 +122,7 @@ body {
   margin-top: 10px;
   text-align: left;
   font-size: 14px;
+  font-weight: 500;
   color: #444;
 }
 .form-container input,
@@ -99,74 +130,48 @@ body {
   width: 100%;
   padding: 12px;
   margin-top: 5px;
-  border-radius: 10px;
-  border: 1px solid #000000;
+  border-radius: var(--input-radius);
+  border: 1px solid var(--input-border);
   font-size: 14px;
   transition: border 0.3s;
+  font-family: inherit;
 }
 .form-container input:focus,
 .form-container textarea:focus {
-  border: 3px solid #0066cc;
+  border: 1px solid var(--input-focus);
   outline: none;
 }
-.form-container button {
+.form-container button,
+.btn-primary {
   margin-top: 20px;
   padding: 12px;
   width: 100%;
   border: none;
-  border-radius: 10px;
-  background: #0066cc;
-  color: white;
+  border-radius: var(--input-radius);
+  background: var(--accent-color);
+  color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
-.form-container button:hover {
-  background: #004a99;
+.form-container button:hover,
+.btn-primary:hover {
+  background: var(--accent-hover);
 }
-.mensaje {
-  display: none;
+
+/* =========================
+   Thank You Message
+   ========================= */
+.thank-you-message {
   margin-top: 15px;
-  color: #28a745;
+  color: var(--success-color);
   font-weight: bold;
   font-size: 15px;
 }
 
-/* Inputs */
-.campo {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  font-family: monospace;
-  border: 1px solid #f9a825;
-  border-radius: 8px;
-  transition: all 0.3s;
-}
-.campo:focus {
-  border-color: #005f73;
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 95, 115, 0.5);
-}
-
-/* Botón */
-.boton {
-  background: #005f73;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
-  display: block;
-  margin: 0 auto;
-}
-.boton:hover {
-  background: #0a9396;
-  transform: scale(1.05);
-}
-
-/* Responsive */
+/* =========================
+   Responsive
+   ========================= */
 @media (max-width: 900px) {
   .contact-wrapper {
     flex-direction: column;
@@ -175,7 +180,6 @@ body {
   .side-image {
     display: none;
   }
-
   .form-container {
     max-width: 100%;
   }
