@@ -1,3 +1,15 @@
+/* CSS Variables for colors and fonts */
+:root {
+  --primary-bg: #ff9e40;
+  --navbar-bg: rgba(159, 191, 44, 0.9);
+  --title-bg: #00838f;
+  --text-color: #fff;
+  --font-main: "Playfair Display", serif;
+  --card-dasha: #065f46;
+  --card-yadira: #65a30d;
+  --card-mariana: #b91c1c;
+}
+
 /* Navbar */
 .banner-nav {
   height: 80px;
@@ -5,10 +17,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(159, 191, 44, 0.9);
-  color: #fff;
+  background: var(--navbar-bg);
+  color: var(--text-color);
   font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   z-index: 1000;
 }
 .logo-brand img {
@@ -19,7 +31,7 @@
 .about-section {
   width: 100%;
   height: 100vh;
-  background: #ff9e40;
+  background: var(--primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +46,7 @@
   height: min(680px, 82vh);
 }
 
-/* Pantallas base */
+/* Base screens */
 .screen {
   position: absolute;
   inset: 0;
@@ -84,17 +96,17 @@
   gap: 20px;
 }
 
-/* Título */
+/* Title */
 .title {
-  background: #00838f;
-  color: #fff;
+  background: var(--title-bg);
+  color: var(--text-color);
   padding: 12px 20px;
   border-radius: 14px;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   width: fit-content;
 }
 
-/* Contenedores */
+/* Containers */
 .characters {
   display: flex;
   flex-direction: column;
@@ -106,9 +118,9 @@
   gap: 12px;
   padding: 16px 18px;
   border-radius: 16px;
-  color: #fff;
+  color: var(--text-color);
   cursor: pointer;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   transition: transform 0.2s ease, filter 0.2s ease;
   width: 360px;
   min-height: 88px;
@@ -128,13 +140,13 @@
   letter-spacing: 0.2px;
 }
 .c-dasha {
-  background: #065f46;
+  background: var(--card-dasha);
 }
 .c-yadira {
-  background: #65a30d;
+  background: var(--card-yadira);
 }
 .c-mariana {
-  background: #b91c1c;
+  background: var(--card-mariana);
 }
 
 .panel {
@@ -144,36 +156,36 @@
   gap: 16px;
   text-align: center;
   padding: 32px;
-  color: #fff;
+  color: var(--text-color);
 }
 
-/* Tipografía de paneles */
+/* Panel typography */
 .panel h1 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   font-size: 2rem;
 }
 .panel p {
   max-width: 760px;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
-/* Botón volver */
+/* Back button */
 .back {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-main);
   background: rgba(0, 0, 0, 0.15);
-  color: #fff;
+  color: var(--text-color);
   padding: 8px 12px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 0.95rem;
 }
 
-/* Estados visibles según radio */
+/* Visible states by radio */
 #home:checked ~ .stage .intro {
   opacity: 1;
   pointer-events: auto;

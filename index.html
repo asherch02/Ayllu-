@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- CSS propio -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
   </head>
   <body>
@@ -30,39 +30,40 @@
           muted
           playsinline
           class="banner-background-video"
+          aria-hidden="true"
         >
           <source src="./assets/mp4/llama.mp4" type="video/mp4" />
         </video>
         <div class="banner-overlay"></div>
         <a href="#carousel-section" class="scroll-down" aria-label="Ir al carrusel">
-          <img src="./assets/img/vector.png" alt="Desplazar hacia abajo" />
+          <img src="./assets/img/vector.png" alt="" />
         </a>
       </div>
       <!-- Navbar -->
-      <nav class="banner-nav navbar navbar-expand-lg" aria-label="Navegación principal">
+      <nav class="banner-nav navbar navbar-expand-lg" aria-label="Main navigation">
         <div class="container-fluid">
           <a class="logo-brand d-flex align-items-center" href="index.html">
-            <img src="./assets/img/logo.png" alt="Logo Ayllu" />
+            <img src="./assets/img/logo.png" alt="Ayllu logo" />
             <span class="brand">Ayllu</span>
           </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbar-nav"
-            aria-controls="navbar-nav"
+            data-bs-target="#main-navbar"
+            aria-controls="main-navbar"
             aria-expanded="false"
             aria-label="Mostrar navegación"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbar-nav">
+          <div class="collapse navbar-collapse justify-content-end" id="main-navbar">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./assets/html/about-us.html">About us</a>
+                <a class="nav-link" href="./assets/html/about-us.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./assets/html/contact.html">Contact</a>
@@ -77,7 +78,7 @@
     </header>
 
     <main>
-      <!-- Sección carrusel -->
+      <!-- Carousel Section -->
       <section class="carousel-section" id="carousel-section">
         <header class="carousel-title">
           <h2>Descubre la riqueza de nuestro Perú</h2>
@@ -116,15 +117,15 @@
         </div>
       </section>
 
-      <!-- Sección propósito, misión, visión, valores -->
+      <!-- About Section -->
       <section id="about" class="about-section">
         <div class="container-fluid">
           <div class="row g-4 align-items-stretch">
             <div class="col-md-4 px-4 d-flex">
               <div id="purpose" class="about-card">
-                <h2>Propósito</h2>
+                <h2>Purpose</h2>
                 <p>
-                  Nuestro propósito es compartir y preservar la riqueza cultural de nuestra región, utilizando el entorno digital como puente entre las tradiciones y las nuevas generaciones. Creemos que la cultura es un tesoro vivo que se fortalece al ser compartido, y que cada persona, sin importar su origen, tiene el poder de aprender, inspirarse y mantener encendida la llama de nuestra identidad, porque al conocer nuestras raíces, descubrimos nuestro futuro.
+                  Our purpose is to share and preserve the cultural richness of our region, using the digital environment as a bridge between traditions and new generations. We believe that culture is a living treasure that grows stronger when shared, and that everyone, regardless of origin, can learn, be inspired, and keep the flame of our identity alive. By knowing our roots, we discover our future.
                 </p>
               </div>
             </div>
@@ -132,17 +133,17 @@
               <div class="row g-4 flex-grow-1">
                 <div class="col-12 d-flex">
                   <div id="mission" class="about-card">
-                    <h2>Misión</h2>
+                    <h2>Mission</h2>
                     <p>
-                      Crear un espacio digital interactivo que promueva la gastronomía, música, arte, lenguas originarias y costumbres del Perú, acercando estas manifestaciones culturales a jóvenes y adultos de forma atractiva y participativa.
+                      Create an interactive digital space that promotes Peruvian gastronomy, music, art, native languages, and customs, bringing these cultural expressions closer to young people and adults in an attractive and participatory way.
                     </p>
                   </div>
                 </div>
                 <div class="col-12 d-flex">
                   <div id="vision" class="about-card">
-                    <h2>Visión</h2>
+                    <h2>Vision</h2>
                     <p>
-                      Ser la plataforma cultural más reconocida del Perú, referente en la difusión creativa de nuestras raíces y puente entre generaciones, comunidades y el mundo.
+                      To be the most recognized cultural platform in Peru, a benchmark in the creative dissemination of our roots and a bridge between generations, communities, and the world.
                     </p>
                   </div>
                 </div>
@@ -150,13 +151,13 @@
             </div>
             <div class="col-md-4 px-4 d-flex">
               <div id="values" class="about-card">
-                <h2>valores</h2>
+                <h2>Values</h2>
                 <ol>
-                  <li>Respeto por la diversidad y las tradiciones.</li>
-                  <li>Autenticidad en cada historia y contenido.</li>
-                  <li>Inclusión de todas las voces y regiones.</li>
-                  <li>Creatividad para mostrar la cultura de forma innovadora.</li>
-                  <li>Colaboración entre comunidades, artistas y público.</li>
+                  <li>Respect for diversity and traditions.</li>
+                  <li>Authenticity in every story and content.</li>
+                  <li>Inclusion of all voices and regions.</li>
+                  <li>Creativity to showcase culture in innovative ways.</li>
+                  <li>Collaboration among communities, artists, and the public.</li>
                 </ol>
               </div>
             </div>
@@ -164,17 +165,17 @@
         </div>
       </section>
 
-      <!-- Actividades -->
+      <!-- Activities Section -->
       <section class="activities-section">
         <div class="container">
-          <h2 class="section-title">¡Actividades extraordinarias!</h2>
+          <h2 class="section-title">Extraordinary Activities!</h2>
           <div class="row">
             <div class="col-md-6">
               <article class="activity-card card">
                 <img src="./assets/img/persona.png" class="card-img-top img-fluid" alt="Mujer indígena cocinando" />
                 <div class="card-body">
                   <p class="card-text">
-                    Talleres presenciales y virtuales de gastronomía regional que combinan preparación de platos típicos y su historia cultural.
+                    In-person and virtual workshops on regional gastronomy that combine the preparation of typical dishes and their cultural history.
                   </p>
                 </div>
               </article>
@@ -184,7 +185,7 @@
                 <img src="./assets/img/todos.png" class="card-img-top img-fluid" alt="Indígenas con tejidos tradicionales peruanos" />
                 <div class="card-body">
                   <p class="card-text">
-                    Programa educativo para conectar estudiantes con comunidades indígenas y preservar saberes ancestrales como música, tejido.
+                    Educational program to connect students with indigenous communities and preserve ancestral knowledge such as music and weaving.
                   </p>
                 </div>
               </article>
@@ -196,7 +197,7 @@
                 <img src="./assets/img/color.png" class="card-img-top img-fluid" alt="Indígenas zampoñas" />
                 <div class="card-body">
                   <p class="card-text">
-                    Iniciativas de muralismo participativo en barrios y comunidades rurales que plasman narrativas locales.
+                    Participatory muralism initiatives in neighborhoods and rural communities that capture local narratives.
                   </p>
                 </div>
               </article>
@@ -222,13 +223,13 @@
               <li>Yadira Luna</li>
             </ul>
           </section>
-          <section class="footer-lema">
+          <section class="footer-motto">
             <h2 class="footer-title">"Made with dedication, because every detail builds a great purpose."</h2>
           </section>
         </div>
       </div>
     </footer>
-    <!-- Scripts Bootstrap -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
