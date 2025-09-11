@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/portada.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 50px;
+    border: 5px solid #cb7722;;
+    border-radius: 5px;
+    background-color: rgba(150, 0, 0, 0.85);;
+}
+ form label {
+    display : block;
+    margin: bottom 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+ }
+button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cb7722;;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease;
+}
