@@ -107,8 +107,13 @@ html {
   border: none;
 }
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -10px); }
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
 }
 
 /* Navbar links */
@@ -167,10 +172,18 @@ html {
   justify-content: center;
   background-color: var(--color-primary);
 }
-#purpose { background-color: var(--color-primary); }
-#mission { background-color: var(--color-secondary); }
-#vision { background-color: var(--color-accent); }
-#values { background-color: var(--color-orange); }
+#purpose {
+  background-color: var(--color-primary);
+}
+#mission {
+  background-color: var(--color-secondary);
+}
+#vision {
+  background-color: var(--color-accent);
+}
+#values {
+  background-color: var(--color-orange);
+}
 
 /* Responsive grid */
 @media (max-width: 768px) {
@@ -186,39 +199,113 @@ html {
 
 /* Activities section */
 .activities-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--color-accent);
-  padding: 50px 20px;
+  background: var(--color-bg-dark);
+  padding: 40px 0;
+  width: 100vw;
+  max-width: 100vw;
   box-sizing: border-box;
 }
 .section-title {
   font-family: var(--font-main);
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--color-primary);
-  margin-bottom: 40px;
+  color: var(--color-accent);
+  margin-bottom: 32px;
   text-align: center;
 }
+.activities-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 32px;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .activity-card {
-  border-radius: 8px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 340px;
+  background: var(--color-accent);
+  color: var(--color-bg-light);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 8px var(--color-accent);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: var(--color-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.activity-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25), 0 2px 12px var(--color-accent);
+  border-color: var(--color-bg-light);
 }
 .card-img-top {
   width: 100%;
-  height: 200px;
+  height: 140px;
   object-fit: cover;
+  border-bottom: 2px solid var(--color-accent);
 }
 .card-body {
-  padding: 1.25rem;
+  padding: 1rem;
+  background: transparent;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .card-text {
   font-size: 1rem;
-  color: #000;
+  color: var(--color-primary);
   font-family: var(--font-main);
+  margin-bottom: 0.5rem;
+}
+.btn-see-more {
+  font-family: var(--font-main);
+  margin-top: 10px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(241, 182, 5, 0.15);
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+}
+.btn-see-more:hover {
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
+.extra-info {
+  margin-top: 8px;
+  font-family: var(--font-main);
+  color: var(--color-orange);
+  background: var(--color-bg-light);
+  border-radius: 6px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 8px rgba(159, 191, 44, 0.12);
+  font-size: 0.95rem;
+  max-height: 120px;
+  overflow-y: auto;
+  transition: max-height 0.3s;
+}
+.visually-hidden {
+  display: none !important;
+}
+
+/* Responsive: cartas en columna en pantallas pequeñas */
+@media (max-width: 991px) {
+  .activities-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .activity-card {
+    max-width: 95vw;
+  }
 }
 
 /* Footer */
@@ -242,13 +329,15 @@ html {
   font-weight: bold;
   margin-bottom: 8px;
 }
-.footer-lema {
+.footer-motto {
   margin-top: 16px;
   margin-left: 20px;
   font-family: var(--font-main);
   opacity: 0.9;
 }
-.footer-info, .footer-founders, .footer-lema {
+.footer-info,
+.footer-founders,
+.footer-motto {
   flex: 1 1 250px;
   margin-bottom: 16px;
 }
