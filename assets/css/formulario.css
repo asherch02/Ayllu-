@@ -3,13 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+.form-container {
+    width: 420px; 
+    text-align: center;
+    margin-top: 40px; /* Espacio extra debajo del navbar */
+}
+
+
+.titulo {
+    background-color: rgb(152, 71, 14);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
 
 body {
-    background-image: url(../img/portada.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-image: url(../img/portada.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 90px; /* Espacio para el navbar */
 }
 form {
     display: flex;
@@ -37,4 +64,81 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: .3s ease;
+}
+.banner-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between; /* Logo a la izq, menú a la der */
+  align-items: center;
+  background: var(--color-banner, #cb7722);
+  color: var(--color-white, #fff);
+  font-size: 1.2rem;
+  font-family: var(--font-main, Arial, sans-serif);
+  transition: background 0.3s ease;
+  z-index: 10;
+  gap: 40px;
+}
+
+.banner-nav .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo a la izq, menú a la der */
+  width: 100%;
+  gap: 30px;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.logo-brand img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  display: block;
+}
+
+.brand {
+  font-family: var(--font-main, Arial, sans-serif);
+  color: var(--color-bg-light, #fff);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffd700;
+}
+
+.navbar-toggler {
+  display: none; /* Oculta el botón hamburguesa en escritorio */
 }
