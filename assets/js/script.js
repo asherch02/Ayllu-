@@ -86,19 +86,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   showTestimonial(testimonialIndex);
-  {
-    if (prevTestimonial) {
-      prevTestimonial.addEventListener("click", function () {
-        testimonialIndex =
-          (testimonialIndex - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(testimonialIndex);
-      });
-    }
-    if (nextTestimonial) {
-      nextTestimonial.addEventListener("click", function () {
-        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-        showTestimonial(testimonialIndex);
-      });
-    }
+  if (prevTestimonial) {
+    prevTestimonial.addEventListener("click", function () {
+      testimonialIndex =
+        (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(testimonialIndex);
+    });
+  }
+  if (nextTestimonial) {
+    nextTestimonial.addEventListener("click", function () {
+      testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+      showTestimonial(testimonialIndex);
+    });
   }
 });
