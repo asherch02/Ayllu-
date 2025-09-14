@@ -23,48 +23,48 @@
   </head>
   <body>
     <header>
-      <!-- Navbar -->
-      <nav class="banner-nav navbar navbar-expand-lg">
+      <nav
+        class="banner-nav navbar navbar-expand-lg"
+        aria-label="Navegación principal"
+      >
         <div class="container-fluid">
-          <!-- Logo and brand -->
-          <a
-            href="../../index.html"
-            class="logo-brand d-flex align-items-center navbar-brand"
-          >
-            <img src="../img/logo.png" alt="Ayllu logo" />
-            <span class="brand-name">Ayllu</span>
+          <a class="logo-brand d-flex align-items-center" href="index.html">
+            <img src="../img/logo.png" alt="Logo Ayllu" />
+            <span class="brand">Ayllu</span>
           </a>
-          <!-- Responsive button -->
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbar-nav"
-            aria-controls="navbar-nav"
+            data-bs-target="#main-navbar"
+            aria-controls="main-navbar"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Mostrar navegación"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- Links -->
           <div
             class="collapse navbar-collapse justify-content-end"
-            id="navbar-nav"
+            id="main-navbar"
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="../../index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Hogar</a
+                >
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./about-us.html"
+                <a class="nav-link" href="../html/about-us.html"
                   >¿Quiénes somos?</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contacto</a>
+                <a class="nav-link" href="../html/contact.html">Contáctanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/activities.hmtl"
+                  >¡Inscríbete!</a
+                >
               </li>
             </ul>
           </div>
@@ -82,12 +82,23 @@
       <div class="stage">
         <section class="screen intro">
           <div class="left-col">
-            <label for="general" class="alpaca">
-              <img src="../img/alpaca.png" alt="peruvian alpaca" />
+            <label for="general" class="ayllu">
+              <img src="../img/logo.png" alt="logo ayllu" />
+              <h3>Ayllu</h3>
             </label>
           </div>
           <div class="right-col">
             <h1 class="title">¿Quiénes somos?</h1>
+            <div
+              id="info-panel"
+              class="info-panel"
+              role="region"
+              aria-live="polite"
+            >
+              <p>
+                ¡Selecciona uno de los cuatro para saber más sobre nosotros!
+              </p>
+            </div>
             <div class="characters">
               <label for="dasha" class="character character-dasha">
                 <img src="../img/dasha.png" alt="Dasha founder" />
@@ -161,6 +172,29 @@
         </section>
       </div>
     </main>
+    <!--Panel de la vision-->
+    <section class="vision-panel">
+      <h1>Más sobre nosotras: La visión de Ayllu</h1>
+      <div class="vision-text">
+        <p>¡Diviértete explorando cómo nació y evolucionó nuestro proyecto!</p>
+      </div>
+      <div class="vision-buttons">
+        <button class="button-num" data-num="1">1</button>
+        <button class="button-num" data-num="2">2</button>
+        <button class="button-num" data-num="3">3</button>
+        <button class="button-num" data-num="4">4</button>
+        <button class="button-num" data-num="5">5</button>
+        <button class="button-num" data-num="6">6</button>
+        <button class="button-num" data-num="7">7</button>
+        <button class="button-num" data-num="8">8</button>
+        <button class="button-num" data-num="9">9</button>
+        <button class="button-num" data-num="10">10</button>
+      </div>
+      <div class="vision-text" id="vision-p">
+        <p>Selecciona cualquier número para ver las etapas de Ayllu</p>
+      </div>
+    </section>
+    <script src="../js/about-us.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

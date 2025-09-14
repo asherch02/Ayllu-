@@ -32,6 +32,7 @@
   color: var(--color-white);
   font-size: 1.2rem;
   font-family: var(--font-main);
+  transition: background 0.3s ease;
   z-index: 2;
 }
 .logo-brand {
@@ -44,12 +45,24 @@
   width: 40px;
   margin-right: 10px;
 }
-.brand-name {
+.brand {
   font-family: var(--font-main);
   color: var(--color-bg-light);
   font-size: 1.5rem;
   font-weight: bold;
 }
+.banner-content {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  color: var(--color-bg-light);
+  font-size: 2rem;
+  font-family: var(--font-main);
+  text-align: center;
+  z-index: 2;
+}
+/* Navbar links */
 .nav-link {
   color: var(--color-bg-light);
   text-decoration: none;
@@ -57,9 +70,16 @@
   transition: color 0.3s ease;
 }
 .nav-link:hover,
-.nav-link.active,
-.nav-link[aria-current="page"] {
+.nav-link.active {
   color: var(--color-accent);
+}
+
+/* Fondo y tipografia*/
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--font-main);
 }
 
 /* =========================
@@ -69,14 +89,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: var(--color-bg-dark);
-  padding-bottom: 40px;
+  padding: 120px 20px 20px 20px;
+  margin-bottom: 30px;
 }
 .stage {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin-top: 40px;
 }
 .screen {
   display: none;
@@ -86,7 +105,6 @@
   padding: 40px 30px;
   margin: 0 auto;
   color: var(--color-bg-dark);
-  font-family: var(--font-main);
 }
 input#home:checked ~ .stage .intro,
 input#general:checked ~ .stage .general,
@@ -120,6 +138,14 @@ input#mariana:checked ~ .stage .mariana {
   margin-bottom: 24px;
   color: var(--color-primary);
 }
+#info-panel {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--color-bg-dark);
+}
 .characters {
   display: flex;
   gap: 24px;
@@ -140,6 +166,10 @@ input#mariana:checked ~ .stage .mariana {
   transform: scale(1.05);
   background: var(--color-accent);
 }
+.ayllu :hover {
+  transform: scale(1.05);
+  background: var(--color-accent);
+}
 .character img {
   width: 80px;
   height: 80px;
@@ -152,11 +182,19 @@ input#mariana:checked ~ .stage .mariana {
   color: var(--color-primary);
   margin: 0;
 }
-.alpaca img {
-  width: 120px;
+.ayllu img {
+  width: 200px;
   height: auto;
-  border-radius: 16px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: var(--color-primary);
+}
+.ayllu h3 {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin: 0;
+  text-align: center;
 }
 
 /* Panels */
@@ -194,13 +232,42 @@ input#mariana:checked ~ .stage .mariana {
   color: var(--color-accent);
   text-decoration: underline;
 }
-
 /* =========================
    Responsive
    ========================= */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .about-section {
     padding: 20px 0;
+  }
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  .right-col {
+    order: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+  .left-col {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 0;
+  }
+  .right-col .title {
+    margin-top: 0;
   }
   .stage {
     max-width: 100%;
@@ -209,18 +276,72 @@ input#mariana:checked ~ .stage .mariana {
   .screen {
     padding: 20px 10px;
   }
-  .intro {
-    flex-direction: column;
-    gap: 20px;
-  }
   .characters {
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
   }
   .character img {
     width: 60px;
     height: 60px;
   }
-  .alpaca img {
-    width: 80px;
+  .ayllu {
+    margin-bottom: 10px;
   }
+  left-col .ayllu img {
+    width: 80px;
+    margin-top: 10px;
+    max-width: 180px;
+    height: auto;
+    margin: 0;
+  }
+}
+/* Panel de vision */
+.vision-panel {
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding: 20px 30px;
+  border-radius: 16px;
+  background: var(--color-card);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.vision-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.button-num {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-bg-light);
+  color: var(--color-primary);
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-num:hover {
+  background: var(--color-card);
+}
+.vision-text {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  color: var(--color-bg-dark);
+}
+
+/*Reducciendo espacio*/
+.about-section h1,
+.about-section p,
+.vision-panel h1,
+.vision-panel p {
+  margin: 0;
 }
