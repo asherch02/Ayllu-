@@ -39,7 +39,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: 1;
 }
 .banner-overlay {
   position: absolute;
@@ -107,8 +107,13 @@ html {
   border: none;
 }
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -10px); }
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
 }
 
 /* Navbar links */
@@ -167,10 +172,18 @@ html {
   justify-content: center;
   background-color: var(--color-primary);
 }
-#purpose { background-color: var(--color-primary); }
-#mission { background-color: var(--color-secondary); }
-#vision { background-color: var(--color-accent); }
-#values { background-color: var(--color-orange); }
+#purpose {
+  background-color: var(--color-primary);
+}
+#mission {
+  background-color: var(--color-secondary);
+}
+#vision {
+  background-color: var(--color-accent);
+}
+#values {
+  background-color: var(--color-orange);
+}
 
 /* Responsive grid */
 @media (max-width: 768px) {
@@ -248,7 +261,25 @@ html {
   font-family: var(--font-main);
   opacity: 0.9;
 }
-.footer-info, .footer-founders, .footer-lema {
+.footer-info,
+.footer-founders,
+.footer-lema {
   flex: 1 1 250px;
   margin-bottom: 16px;
+}
+
+/* Saludo*/
+#saludo {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: var(--color-primary);
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: opacity 2s black;
+  z-index: 10;
+  background-color: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: var(--font-main);
 }
