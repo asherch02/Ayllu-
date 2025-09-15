@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
       bannerPhrase.textContent = phrases[randomIndex];
     }
   }
-  //Cambiar la frase cada segundo
-  setInterval(changeBannerPhrase, 1000);
-  //Fundadoras -> añadimos el rol de cada una :3
-  function Founder() {
-    this.name = this.name;
-    this.role = this.role;
+  setInterval(changeBannerPhrase, 5000);
+
+  // Fundadoras
+  function Founder(name, role) {
+    this.name = name;
+    this.role = role;
     this.getDisplay = function () {
       return this.name + " - " + this.role;
     };
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       foundersList.appendChild(li);
     }
   }
+
   // Botones "Ver más" en actividades
   let seeMoreBtns = document.querySelectorAll(".btn-see-more");
   if (seeMoreBtns) {
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //Carrusel de testimonios
+  // Carrusel de testimonios
   let testimonials = [
     "“Ayllu me permitió reconectar con mis raíces y aprender recetas que mi abuela preparaba.” – Rosa, participante",
     "“Las actividades de muralismo fueron una experiencia única para mi comunidad.” – Juan, voluntario",
@@ -97,6 +98,48 @@ document.addEventListener("DOMContentLoaded", function () {
     nextTestimonial.addEventListener("click", function () {
       testimonialIndex = (testimonialIndex + 1) % testimonials.length;
       showTestimonial(testimonialIndex);
+    });
+  }
+
+  // Eventos próximos: botón "Ver más"
+  let eventBtns = document.querySelectorAll(".btn-event-details");
+  if (eventBtns) {
+    eventBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        let detailsId = btn.getAttribute("aria-controls");
+        let details = document.getElementById(detailsId);
+        if (!details) return;
+        let expanded = btn.getAttribute("aria-expanded") === "true";
+        if (!expanded) {
+          details.classList.remove("visually-hidden");
+          btn.setAttribute("aria-expanded", "true");
+          btn.textContent = "Ver menos";
+          details.setAttribute("aria-live", "polite");
+          details.setAttribute("tabindex", "0");
+          details.focus();
+        } else {
+          details.classList.add("visually-hidden");
+          btn.setAttribute("aria-expanded", "false");
+          btn.textContent = "Ver más";
+          details.removeAttribute("aria-live");
+          details.removeAttribute("tabindex");
+        }
+      });
+    });
+  }
+
+  // Botón para ir arriba
+  let goTopBtn = document.getElementById("go-top-btn");
+  if (goTopBtn) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        goTopBtn.classList.remove("visually-hidden");
+      } else {
+        goTopBtn.classList.add("visually-hidden");
+      }
+    });
+    goTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 });
