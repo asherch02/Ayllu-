@@ -40,17 +40,17 @@
           class="scroll-down"
           aria-label="Ir al carrusel"
         >
-          <img src="./assets/img/vector.png" alt="" />
+          <img src="./assets/img/vector.png" alt="Desplazar hacia abajo" />
         </a>
       </div>
       <!-- Navbar -->
       <nav
         class="banner-nav navbar navbar-expand-lg"
-        aria-label="Main navigation"
+        aria-label="Navegación principal"
       >
         <div class="container-fluid">
           <a class="logo-brand d-flex align-items-center" href="index.html">
-            <img src="./assets/img/logo.png" alt="Ayllu logo" />
+            <img src="./assets/img/logo.png" alt="Logo Ayllu" />
             <span class="brand">Ayllu</span>
           </a>
           <button
@@ -94,7 +94,7 @@
         </div>
       </nav>
       <div class="banner-content">
-        <h1>Nuestra historia puede ser tu inspiración</h1>
+        <h1 id="banner-phrase">Nuestra historia puede ser tu inspiración</h1>
       </div>
     </header>
 
@@ -248,57 +248,124 @@
 
       <!-- Activities Section -->
       <section class="activities-section">
-        <div class="container">
-          <h2 class="section-title">Actividades geniales!</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <article class="activity-card card">
-                <img
-                  src="./assets/img/peruvian-food.png"
-                  class="card-img-top img-fluid"
-                  alt="Mujeres Indígenas cocinando"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Talleres presenciales y virtuales sobre gastronomía regional
-                    que combinan la preparación de platos típicos con su
-                    historia cultural.
-                  </p>
-                </div>
-              </article>
+        <h2 class="section-title">Actividades geniales!</h2>
+        <div class="activities-row">
+          <article class="activity-card">
+            <img
+              src="./assets/img/peruvian-food.png"
+              class="card-img-top"
+              alt="Mujeres indígenas cocinando"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Talleres presenciales y virtuales sobre gastronomía regional que
+                combinan la preparación de platos típicos con su historia
+                cultural.
+              </p>
+              <button
+                class="btn-see-more"
+                aria-expanded="false"
+                aria-controls="info-food"
+              >
+                Ver más
+              </button>
+              <div id="info-food" class="extra-info visually-hidden">
+                Aquí aprenderás el significado cultural de cada plato.
+              </div>
             </div>
-            <div class="col-md-6">
-              <article class="activity-card card">
-                <img
-                  src="./assets/img/grandmothers.png"
-                  class="card-img-top img-fluid"
-                  alt="Indígenas con tejidos tradicionales peruanos"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Programa educativo para conectar a estudiantes con
-                    comunidades indígenas y preservar conocimientos ancestrales
-                    como la música y el tejido.
-                  </p>
-                </div>
-              </article>
+          </article>
+          <article class="activity-card">
+            <img
+              src="./assets/img/grandmothers.png"
+              class="card-img-top"
+              alt="Indígenas con tejidos tradicionales peruanos"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Programa educativo para conectar a estudiantes con comunidades
+                indígenas y preservar conocimientos ancestrales como la música y
+                el tejido.
+              </p>
+              <button
+                class="btn-see-more"
+                aria-expanded="false"
+                aria-controls="info-grandmothers"
+              >
+                Ver más
+              </button>
+              <div id="info-grandmothers" class="extra-info visually-hidden">
+                Podrás conocer la historia de los tejidos y la música.
+              </div>
+            </div>
+          </article>
+          <article class="activity-card">
+            <img
+              src="./assets/img/murals.png"
+              class="card-img-top"
+              alt="Indígenas zampoñas"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Iniciativas de muralismo participativo en barrios y comunidades
+                rurales que capturan narrativas locales.
+              </p>
+              <button
+                class="btn-see-more"
+                aria-expanded="false"
+                aria-controls="info-murals"
+              >
+                Ver más
+              </button>
+              <div id="info-murals" class="extra-info visually-hidden">
+                Descubrirás cómo los murales transmiten historias y valores.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Carrusel de Testimonios -->
+      <section class="testimonials-section">
+        <h2 class="section-title">Testimonios</h2>
+        <div id="testimonial-content" class="testimonial-content"></div>
+        <div class="testimonial-controls">
+          <button id="prev-testimonial" aria-label="Anterior">←</button>
+          <button id="next-testimonial" aria-label="Siguiente">→</button>
+        </div>
+      </section>
+      <!-- Eventos próximos-->
+      <section class="events-section">
+        <h2 class="section-title">Eventos próximos</h2>
+        <div class="events-list">
+          <div class="event-card">
+            <h3 class="event-title">Taller de cocina andina</h3>
+            <p class="event-date">Fecha: 20/09/2025</p>
+            <p class="event-place">Lugar: Huancayo</p>
+            <button
+              class="btn-event-details"
+              aria-expanded="false"
+              aria-controls="event1-details"
+            >
+              Ver más
+            </button>
+            <div id="event1-details" class="event-details visually-hidden">
+              Aprende a preparar platos típicos y conoce su historia con
+              expertos locales.
             </div>
           </div>
-          <div class="row mt-4">
-            <div class="col-md-12">
-              <article class="activity-card card">
-                <img
-                  src="./assets/img/murals.png"
-                  class="card-img-top img-fluid"
-                  alt="Indígenas zampoñas"
-                />
-                <div class="card-body">
-                  <p class="card-text">
-                    Iniciativas de muralismo participativo en barrios y
-                    comunidades rurales que capturan narrativas locales.
-                  </p>
-                </div>
-              </article>
+          <div class="event-card">
+            <h3 class="event-title">Muralismo comunitario</h3>
+            <p class="event-date">Fecha: 25/09/2025</p>
+            <p class="event-place">Lugar: Cusco</p>
+            <button
+              class="btn-event-details"
+              aria-expanded="false"
+              aria-controls="event2-details"
+            >
+              Ver más
+            </button>
+            <div id="event2-details" class="event-details visually-hidden">
+              Participa en la creación de murales que cuentan historias de tu
+              barrio.
             </div>
           </div>
         </div>
@@ -315,7 +382,7 @@
           </section>
           <section class="footer-founders">
             <h2 class="footer-title">Fundadoras:</h2>
-            <ul>
+            <ul id="founders-list">
               <li>Dasha Espinoza</li>
               <li>Mariana Briceño</li>
               <li>Yadira Luna</li>
@@ -330,6 +397,14 @@
         </div>
       </div>
     </footer>
+    <!-- Botón Ir arriba -->
+    <button
+      id="go-top-btn"
+      aria-label="Ir arriba"
+      class="go-top-btn visually-hidden"
+    >
+      ↑
+    </button>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
