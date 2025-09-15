@@ -1,42 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-<<<<<<< HEAD
-
-body {
-    background-image: url(../img/portada.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-=======
 .form-container {
-    width: 420px; 
-    text-align: center;
-    margin-top: 40px; /* Espacio extra debajo del navbar */
+  width: 420px;
+  text-align: center;
+  margin-top: 40px; /* Espacio extra debajo del navbar */
 }
-
 
 .titulo {
-    background-color: rgb(152, 71, 14);
-    color: white;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 20px;
-     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  background-color: rgb(152, 71, 14);
+  color: white;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 form input,
 form textarea {
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
 }
 
 body {
@@ -46,37 +36,34 @@ body {
   align-items: center;
   height: 100vh;
   padding-top: 90px; /* Espacio para el navbar */
->>>>>>> origin/formulario-rama
 }
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 50px;
-    border: 5px solid #cb7722;;
-    border-radius: 5px;
-    background-color: rgba(150, 0, 0, 0.85);;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 50px;
+  border: 5px solid #cb7722;
+  border-radius: 5px;
+  background-color: rgba(150, 0, 0, 0.85);
 }
- form label {
-    display : block;
-    margin: bottom 10px;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
- }
+form label {
+  display: block;
+  margin: bottom 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
 button {
-    padding: 10px 25px;
-    border-radius: 5px;
-    border: none;
-    background-color: #cb7722;;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s ease;
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cb7722;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-<<<<<<< HEAD
-=======
 .banner-nav {
   position: fixed;
   top: 0;
@@ -154,4 +141,3 @@ button {
 .navbar-toggler {
   display: none; /* Oculta el botón hamburguesa en escritorio */
 }
->>>>>>> origin/formulario-rama
