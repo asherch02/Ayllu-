@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="../css/test.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<body>
+    <body>
+    <!!--video de fondo--!!>
+    <video autoplay muted loop id="myVideo">
+        <source src="../mp4/videoo.mp4" type="video/mp4">
+    </video>
+
+    <div class="panel">
+        <h1>DESCUBRE CUÁL ES TU PERSONALIDAD</h1>
+        <div class="question" id="ques"></div>
+        <div class="options" id="opt"></div>
+        <button onclick="checkAns()" id="btn">SIGUIENTE</button>
+        <div id="score"></div>
+    </div>
+<br>
+    <table class="table" id="resultTable" style="display:none;">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Personalidad</th>
+      <th scope="col">Taller recomendado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>Líder</td>
+      <td>Liderazgo cultural: Taller para aprender a organizar eventos culturales, liderar proyectos comunitarios y promover tradiciones de manera inspiradora.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td>Analítico</td>
+      <td>Investigación y conservación cultural: Taller enfocado en recopilar información sobre tradiciones, analizar datos culturales y proponer formas de preservarlas.</td>
+      
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td>Creativo/a</td>
+      <td>Arte y expresión cultural: Taller de creación artística, diseño de proyectos culturales, storytelling y actividades para reinterpretar tradiciones de manera innovadora.</td>
+    </tr>
+     <tr>
+      <th scope="col"></th>
+      <td>Colaborador/a</td>
+      <td>Trabajo en comunidad y redes culturales: Taller para aprender a trabajar en equipo, colaborar con otras personas y promover actividades culturales colectivas.</td>
+    </tr>
+  </tbody>
+</table>
+
+ <script src="../js/test.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
