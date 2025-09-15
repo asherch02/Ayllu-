@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("myForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validación simple (HTML5 ya valida los campos 'required')
+    if (form.checkValidity()) {
+      form.innerHTML = `<h3 style="color:white; margin:40px 0;">¡Enviado!</h3>`;
+    }
+  });
+});
+
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();  // Evita que la página se recargue al enviar
 
